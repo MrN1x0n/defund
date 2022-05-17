@@ -12,8 +12,7 @@ bash_profile=$HOME/.bash_profile
 if [ -f "$bash_profile" ]; then
     . $HOME/.bash_profile
 fi
-sleep 1 && curl -s https://raw.githubusercontent.com/MrN1x0n/MrN1x0n/main/logo.sh | bash && sleep 1
-
+sleep 1 && curl -s https://github.com/MrN1x0n/MrN1x0n/raw/main/logo.sh | bash && sleep 1
 
 if [ ! $DEFUND_NODENAME ]; then
 read -p "Enter node name: " DEFUND_NODENAME
@@ -60,7 +59,7 @@ sed -i.bak -e "s/indexer *=.*/indexer = \"null\"/g" $HOME/.defund/config/config.
 
 wget -O $HOME/.defund/config/genesis.json https://raw.githubusercontent.com/schnetzlerjoe/defund/main/testnet/private/genesis.json
 defundd tendermint unsafe-reset-all
-wget -O $HOME/.defund/config/addrbook.json https://api.nodes.guru/defund_addrbook.json
+wget -O $HOME/.defund/config/addrbook.json https://raw.githubusercontent.com/MrN1x0n/defund/main/defund_addrbook.json
 echo -e '\n\e[42mRunning\e[0m\n' && sleep 1
 echo -e '\n\e[42mCreating a service\e[0m\n' && sleep 1
 
