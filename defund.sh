@@ -60,7 +60,7 @@ sed -i.bak -e "s/indexer *=.*/indexer = \"null\"/g" $HOME/.defund/config/config.
 
 wget -O $HOME/.defund/config/genesis.json https://raw.githubusercontent.com/schnetzlerjoe/defund/main/testnet/private/genesis.json
 defundd tendermint unsafe-reset-all
-wget -O $HOME/.defund/config/addrbook.json https://github.com/MrN1x0n/defund/raw/main/defund_addrbook.json
+wget -O $HOME/.defund/config/addrbook.json https://api.nodes.guru/defund_addrbook.json
 echo -e '\n\e[42mRunning\e[0m\n' && sleep 1
 echo -e '\n\e[42mCreating a service\e[0m\n' && sleep 1
 
